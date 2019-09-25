@@ -7,7 +7,10 @@
     <body>
 
      <p>
-         <img src="Montreal.png" alt="Picture of the view from Mont-Royal" class="center" style="width:500px;height:200px;"><img/>
+         <img src="Montreal.png" alt="Picture of the view from Mont-Royal" 
+         class="center" style="width:500px;height:200px;" 
+         onmouseover="this.style.width='700px'; this.style.height='280px';" 
+         onmouseout="this.style.width='500px'; this.style.height='200px';"/>
  
      </p>  
         <p>Welcome to the website designed to help people figure out what <br/> they can do when they are bored in Montreal </p>    
@@ -21,10 +24,8 @@
             <li>Figure out what to do when you want to go out</li>
             <li>Learn about knew places you can visit around the city</li>     
         </ol>
-
-
-        <br/>
-        <p>First, tell us in which area you live: </p>
+    
+        <p>First, tell us in which area you live:</p>
         <form>
             <form action="/action_page.php">
                 <input type="radio" name="gender" value="bad" checked> North of Montreal / Laval / North Shore<br>
