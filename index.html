@@ -11,14 +11,24 @@
         <div class="centerref">
         <p>Welcome to the website designed to help people figure out what <br/> they can do when they are bored in Montreal </p>    
         </form>
-        <p>This website will help you:</p>
-        <ol>
-            <li>Get creative date ideas</li>
-            <li>Figure out what to do when you want to go out</li>
-            <li>Learn about knew places you can visit around the city</li>     
-        </ol>
-         <p>First, tell us in which area you live:</p>
-        <form>
+            <p>This website will help you:</p>
+            <ol>
+                <li>Get creative date ideas</li>
+                <li>Figure out what to do when you want to go out</li>
+                <li>Learn about knew places you can visit around the city</li>     
+            </ol>
+            <p>First, you need to tell us what your name is and how to join you:</p>
+                <form action="/my-handling-form-page" method="post">
+                    <div>
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="user_name">
+                    </div>
+                    <div>
+                      <label for="mail">E-mail:</label>
+                      <input type="text" id="mail" name="user_mail">
+                    </div>
+                  </form>
+            <p>Now tell us in which area of Montreal you live in</p>
             <form action="/action_page.php">
                 <input type="radio" name="gender" value="bad" checked> North of Montreal / Laval / North Shore<br>
                 <input type="radio" name="gender" value="good"> Greater Montreal / Montreal / West Island<br>
@@ -26,13 +36,13 @@
                 <input type="submit">
         </form> 
     </div>     
-    <p>    
+
+
+       <p>    
             <img src="Montreal.png" alt="Picture of the view from Mont-Royal" 
             class=centerwtv style="width:700px;height:390px;" 
             onmouseover="this.style.width='710px'; this.style.height='400px'; " 
             onmouseout="this.style.width='700px'; this.style.height='390px';" />
-  
-        
         </p>
     </body>
 
