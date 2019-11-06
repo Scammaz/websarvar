@@ -28,17 +28,6 @@ h1{
     text-align: center;
     text-shadow: 3px 2px black;
 }
-h2 {
-    color: white;
-    text-align: center;
-    font-style: italic;
-}
-h3 {
-    color: black;
-    text-align: left;
-}
-ul.a {
-    list-style-type: circle;
 }
 select {
     width: 30%;
