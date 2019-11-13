@@ -4,7 +4,10 @@
  <head>
         <title> Activities  </title>
         <link rel="stylesheet" type="text/css" href="stylemaine.css"> <!--external css-->
- </head>
+        <script src="validate/checkEmptyForm.js"> </script> <!--external javascript form check-->
+        <script src="validate/validateName.js"></script> <!--external javascript name check-->  
+
+</head>
     <body>
        
 
@@ -20,12 +23,13 @@
             <p>First, you need to tell us what your name is and how to join you:</p>
                 <form action="/my-handling-form-page" method="post">
                     <div>
-                      <label for="name">Name:</label>
-                      <input type="text" id="name" name="user_name">
-                    </div>
-                    <div>
-                      <label for="mail">E-mail:</label>
-                      <input type="text" id="mail" name="user_mail">
+
+                        <br/>First Name<br/>
+                        <input type="text" name="first" id="first" onkeyup="validateName(this)"> <br> <!--verifies for no spaces or # char-->
+                        <br/>Last Name<br/>
+                        <input type="text" name="last" id="last" onkeyup="validateName(this)"> <br/>
+                        <br/><label for="mail">E-mail:</label><br/>
+                        <input type="text" id="email" name="email">
                     </div>
                   </form>
             <p>Now tell us in which area of Montreal you live in</p>
@@ -33,7 +37,8 @@
                 <input type="radio" name="gender" value="bad" checked> North of Montreal / Laval / North Shore<br>
                 <input type="radio" name="gender" value="good"> Greater Montreal / Montreal / West Island<br>
                 <input type="radio" name="gender" value="other"> South Shore / Chateaugay / Saint-Constant<br><br>
-                <input type="submit">
+                <button class="button" onclick="checkEmptyForm()">Submit Inscription</button> <!--checks function to verify for empty form-->
+
         </form> 
     </div>     
 
