@@ -8,7 +8,7 @@
 
 <body>
 
-Welcome <?=$_GET["first"] $_GET["last"];?> <br>
+Welcome <?=$_GET["first"],$_GET["last"];?> <br>
 Your email address is: <?php echo $_GET["email"]; ?>
 
 </body>
