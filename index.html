@@ -21,9 +21,8 @@
                 <li>Learn about knew places you can visit around the city</li>     
             </ol>
             <p>First, you need to tell us what your name is and how to join you:</p>
-                <form action="/my-handling-form-page" method="post">
+                <form name="subs"> 
                     <div>
-
                         <br/>First Name<br/>
                         <input type="text" name="first" id="first" onkeyup="validateName(this)"> <br> <!--verifies for no spaces or # char-->
                         <br/>Last Name<br/>
@@ -31,18 +30,15 @@
                         <br/><label for="mail">E-mail:</label><br/>
                         <input type="text" id="email" name="email">
                     </div>
-                  </form>
+                </form>
             <p>Now tell us in which area of Montreal you live in</p>
-            <form action="/action_page.php">
+            <form>
                 <input type="radio" name="gender" value="bad" checked> North of Montreal / Laval / North Shore<br>
                 <input type="radio" name="gender" value="good"> Greater Montreal / Montreal / West Island<br>
                 <input type="radio" name="gender" value="other"> South Shore / Chateaugay / Saint-Constant<br><br>
-                <button class="button" onclick="checkEmptyForm()">Submit Inscription</button> <!--checks function to verify for empty form-->
-
-        </form> 
+                <button onclick="checkEmptyForm()">Submit Data</button> <!--checks function to verify for empty form-->
+             </form> 
     </div>     
-
-
        <p>    
             <img src="Montreal.png" alt="Picture of the view from Mont-Royal" 
             class=centerwtv style="width:700px;height:390px;" 
@@ -50,11 +46,6 @@
             onmouseout="this.style.width='700px'; this.style.height='390px';" />
         </p>
     </body>
-
-
-
-
-
 </html>
 
 
