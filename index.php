@@ -20,7 +20,7 @@
                 <li>Learn about new places you can visit around the city</li>     
             </ol>
             <p>First, you need to tell us what your name is and how to join you:</p>
-                <form name="subs" action="/action_page.php" method="post">
+                <form name="subs" action="/action_page.php" method="get">
                     <div>
                         <br/>First Name<br/>
                         <input type="text" name="first" id="first" onkeyup="validateName(this)"> <br> <!--verifies for no spaces or # char-->
@@ -29,9 +29,8 @@
                         <br/><label for="mail">E-mail:</label><br/>
                         <input type="text" id="email" name="email">
                     </div>
-                </form>
+              
             <p>Now tell us in which area of Montreal you live in</p>
-           <<form action="/action_page.php" method="post">
                 <input type="radio" name="gender" value="bad"> North of Montreal / Laval / North Shore<br>
                 <input type="radio" name="gender" value="good"> Greater Montreal / Montreal / West Island<br>
                 <input type="radio" name="gender" value="other"> South Shore / Chateaugay / Saint-Constant<br><br>
