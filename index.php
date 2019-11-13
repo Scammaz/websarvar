@@ -31,8 +31,8 @@
                     </div>
                 </form>
             <p>Now tell us in which area of Montreal you live in</p>
-            <<form action="/action_page.php" method="post">>
-                <input type="radio" name="gender" value="bad" checked> North of Montreal / Laval / North Shore<br>
+           <<form action="/action_page.php" method="post">
+                <input type="radio" name="gender" value="bad"> North of Montreal / Laval / North Shore<br>
                 <input type="radio" name="gender" value="good"> Greater Montreal / Montreal / West Island<br>
                 <input type="radio" name="gender" value="other"> South Shore / Chateaugay / Saint-Constant<br><br>
                 <button onclick="checkEmptyForm()">Submit Data</button> <!--checks function to verify for empty form-->
@@ -46,7 +46,7 @@
         </p>
     </body>
 
-    <?php
+ 
 
 </html>
 
