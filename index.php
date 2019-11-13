@@ -12,16 +12,15 @@
        
 
         <div class="centerref">
-        <p>Welcome to the website designed to help people figure out what <br/> they can do when they are bored in Montreal </p>    
-        </form>
+        <p>Welcome to the website designed to help people figure out what <br/> they can do when they are bored in Montreal </p>
             <p>This website will help you:</p>
             <ol>
                 <li>Get creative date ideas</li>
                 <li>Figure out what to do when you want to go out</li>
-                <li>Learn about knew places you can visit around the city</li>     
+                <li>Learn about new places you can visit around the city</li>     
             </ol>
             <p>First, you need to tell us what your name is and how to join you:</p>
-                <form name="subs"> 
+                <form name="subs" action="/action_page.php" method="post">
                     <div>
                         <br/>First Name<br/>
                         <input type="text" name="first" id="first" onkeyup="validateName(this)"> <br> <!--verifies for no spaces or # char-->
@@ -32,7 +31,7 @@
                     </div>
                 </form>
             <p>Now tell us in which area of Montreal you live in</p>
-            <form>
+            <<form action="/action_page.php" method="post">>
                 <input type="radio" name="gender" value="bad" checked> North of Montreal / Laval / North Shore<br>
                 <input type="radio" name="gender" value="good"> Greater Montreal / Montreal / West Island<br>
                 <input type="radio" name="gender" value="other"> South Shore / Chateaugay / Saint-Constant<br><br>
@@ -46,6 +45,9 @@
             onmouseout="this.style.width='700px'; this.style.height='390px';" />
         </p>
     </body>
+
+    <?php
+
 </html>
 
 
