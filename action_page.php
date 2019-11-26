@@ -13,8 +13,9 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $emailErr = "Invalid email format";
 }
 ?>
+
 Welcome <?=$_GET["first"]. " " . $_GET["last"];?> <br>
-Your email address is: <?php echo $_GET["email"]; ?>
+Your email address is: <?php echo ["email"]; ?>
 
 </body>
 </html>
