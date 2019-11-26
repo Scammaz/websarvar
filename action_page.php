@@ -9,8 +9,8 @@
 <body>
 <?php
 $email = test_input($_GET["email"])
-$first = ($_GET["first"])
-$last = ($_GET["last"])  
+$first = test_input($_GET["first"])
+$last = test_input($_GET["last"])  
 // Validation                   
 function test_input($data) {
   $data = trim($data);
@@ -19,7 +19,7 @@ function test_input($data) {
   return $data;
 }
 ?>
-Welcome <?=echo $first " " echo $last;?> <br>
+Welcome <?=echo $first ,  " ", echo $last;?> <br>
 Your email address is: <?php echo $email; ?>
 
 
