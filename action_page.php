@@ -15,7 +15,8 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 ?>
 
 Welcome <?=$_GET["first"]. " " . $_GET["last"];?> <br>
-Your email address is: <?php echo ["email"]; ?>
+Your email address is: <?php echo $email; ?>
+
 
 </body>
 </html>
