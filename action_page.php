@@ -16,7 +16,15 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 Welcome <?=$_GET["first"]. " " . $_GET["last"];?> <br>
 Your email address is: <?php echo $email; ?>
+<?php 
 
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 
 </body>
 </html>
