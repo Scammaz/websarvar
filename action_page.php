@@ -9,9 +9,15 @@
 <body>
 <?php
 $email = test_input($_GET["email"])
-$first = test_input($_GET["first"])
-$last = test_input($_GET["last"])  
-// Validation                   
+?>
+
+
+Welcome <?=$_GET["first"]. " " . $_GET["last"];?> <br>
+Your email address is: <?php echo $email; ?>
+
+<!-- Some form of server side validattion 
+
+<?php                       
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -19,12 +25,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-Welcome <?=echo $first ,  " ", echo $last;?> <br>
-Your email address is: <?php echo $email; ?>
-
-
-
-
 
 </body>
 </html>
