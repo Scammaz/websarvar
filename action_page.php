@@ -19,7 +19,7 @@ function test_input($data) {
   return $data;
 }
 ?>
-Welcome <?=$first. " " . $last;?> <br>
+Welcome <?=echo $first " " echo $last;?> <br>
 Your email address is: <?php echo $email; ?>
 
 
