@@ -14,8 +14,9 @@ $last =($_GET"last" );
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $first = filter_var($first, FILTER_SANITIZE_STRING);
 $last = filter_var($last, FILTER_SANITIZE_STRING);
-echo("Welcome $first, $last");
-echo("Your Email Address is: $email" );
+echo $email 
+echo $first
+echo $last
 
 ?>
 
