@@ -13,10 +13,10 @@ $first =($_GET['first']);
 $last =($_GET['last']);
 
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-#$first = filter_var($first, FILTER_SANITIZE_STRING);
+$first = filter_var($first, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 #$last = filter_var($last, FILTER_SANITIZE_STRING);
     echo ( "$email is valid email");
- #   echo ("First name = $first");
+    echo ("First name = $first");
  #   echo ("LAST NAME = $last");
 
 ?>
