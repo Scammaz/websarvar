@@ -34,7 +34,7 @@ if (!$conn) {
 }
 
 $sql = "SELECT userid, firstname, lastname, email FROM users;";
-$sql_insert = "INSERT INTO users (firstname,lastname,email) values("$first","$last","$email");";
+$sql_insert = "INSERT INTO users (firstname,lastname,email) values($first,$last,$email);";
 
 $result = mysqli_query($conn, $sql);
 
