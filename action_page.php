@@ -36,13 +36,14 @@ if (!$conn) {
 $sql = "SELECT userid, firstname, lastname, email FROM users;";
 $sql_insert = "INSERT INTO users (firstname,lastname,email) values('$first','$last','$email');";
 
-$result = mysqli_query($conn, $sql);
+
 
 if (mysqli_query($conn, $sql_insert)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+$result = mysqli_query($conn, $sql);
 echo ("<br>");
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
