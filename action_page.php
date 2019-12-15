@@ -35,7 +35,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT userid, firstname, lastname, email FROM MyGuests";
+$sql = "SELECT userid, firstname, lastname, email FROM users";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
