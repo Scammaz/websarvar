@@ -8,9 +8,9 @@
 
 <body>
 <?php
-$email = ($_GET"email");
-$first =($_GET"first" );
-$last =($_GET"last" );
+$email = ($_GET['email']);
+$first =($_GET['first']);
+$last =($_GET['last']);
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $first = filter_var($first, FILTER_SANITIZE_STRING);
 $last = filter_var($last, FILTER_SANITIZE_STRING);
