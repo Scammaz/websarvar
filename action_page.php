@@ -21,9 +21,7 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     echo "<br>";
     echo ("Last Name = $last");
     echo "<br>";
-?>
 
-<?php
 $servername = "localhost";
 $username = "php";
 $password = "password";
@@ -36,15 +34,14 @@ if (!$conn) {
 }
 
 $sql = "SELECT userid, firstname, lastname, email FROM users;";
-$sql_insert = "INSERT into users(firstname,lastname,email)values("$first","$last","$email");";
+$sql_insert = "INSERT INTO users (firstname,lastname,email) values("$first","$last","$email");";
 
 $result = mysqli_query($conn, $sql);
 
-
 if (mysqli_query($conn, $sql_insert)) {
-    echo "Record updated successfully";
+    echo "New record created successfully";
 } else {
-    echo "Error updating record: " . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 if (mysqli_num_rows($result) > 0) {
