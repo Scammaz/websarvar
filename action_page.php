@@ -17,9 +17,9 @@ $first = filter_var($first, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     echo ( "$email is valid email");
     echo "<br>";
-    echo ("First name = $first");
+    echo ("First Name = $first");
     echo "<br>";
-    echo ("Last Namme = $last");
+    echo ("Last Name = $last");
     echo "<br>";
 ?>
 
