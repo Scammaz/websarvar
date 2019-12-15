@@ -8,12 +8,18 @@
 
 <body>
 <?php
-$email = test_input($_GET["email"])
+$email = ($_GET"email")
+$first =($_GET"first" )
+$last =($_GET"first" )
+$email = filter_var($email, FILTER_VALIDATE_EMAIL)
+$first = filter_var($first, FILTER_VALIDATE_STRING)
+$last = filter_var($last, FILTER_VALIDATE_STRING)
+
 ?>
-
-
 Welcome <?=$_GET["first"]. " " . $_GET["last"];?> <br>
 Your email address is: <?php echo $email; ?>
+
+
 
 <!-- Some form of server side validattion 
 
