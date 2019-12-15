@@ -42,7 +42,7 @@ $result = mysqli_query($conn, $sql);
 
 $inject_php = mysqli_query($conn, $sql_insert);
 
-$inject_php;
+#$inject_php;
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
