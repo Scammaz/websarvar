@@ -16,7 +16,7 @@ $first = filter_var($first, FILTER_VALIDATE_STRING)
 $last = filter_var($last, FILTER_VALIDATE_STRING)
 
 ?>
-Welcome <?=$_GET["first"]. " " . $_GET["last"];?> <br>
+Welcome <?=$first. " " . $last;?> <br>
 Your email address is: <?php echo $email; ?>
 
 
