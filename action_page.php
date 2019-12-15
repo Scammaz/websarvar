@@ -21,42 +21,43 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     echo "<br>";
     echo ("Last Name = $last");
     echo "<br>";
+    ?>  
+    <div class="centerref">
+        <?php
+            // HERE IS THE INPUT AND SHOW SECTION OF THE SQL DATABASE
 
-$servername = "localhost";
-$username = "php";
-$password = "password";
-$dbname = "test";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+        $servername = "localhost";
+        $username = "php";
+        $password = "password";
+        $dbname = "test";
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        // Check connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $sql = "SELECT userid, firstname, lastname, email FROM users;";
+        $sql_insert = "INSERT INTO users (firstname,lastname,email) values('$first','$last','$email');";
 
-$sql = "SELECT userid, firstname, lastname, email FROM users;";
-$sql_insert = "INSERT INTO users (firstname,lastname,email) values('$first','$last','$email');";
+        if (mysqli_query($conn, $sql_insert)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+        $result = mysqli_query($conn, $sql);
+        echo ("<br>");
+        if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "ID: " . $row["userid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " Email:" . $row["email"]. "<br>";
+            }
+        } else {
+            echo "0 results";
+        }
 
-
-
-if (mysqli_query($conn, $sql_insert)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-$result = mysqli_query($conn, $sql);
-echo ("<br>");
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["userid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " Email:" . $row["email"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-
-mysqli_close($conn);
-?>
-
+        mysqli_close($conn);
+        ?>
+    </div> 
 
 </body>
 </html>
