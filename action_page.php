@@ -10,7 +10,7 @@
 <?php
 $email = ($_GET"email")
 $first =($_GET"first" )
-$last =($_GET"first" )
+$last =($_GET"last" )
 $email = filter_var($email, FILTER_VALIDATE_EMAIL)
 $first = filter_var($first, FILTER_VALIDATE_STRING)
 $last = filter_var($last, FILTER_VALIDATE_STRING)
