@@ -33,8 +33,8 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT userid, firstname, lastname, email FROM users;";
-$sql_insert = "INSERT INTO users (firstname,lastname,email) values($first,$last,$email);";
+$sql = "SELECT userid, firstname, lastname, email FROM users";
+$sql_insert = "INSERT INTO users (firstname,lastname,email) values($first,$last,$email)";
 
 $result = mysqli_query($conn, $sql);
 
