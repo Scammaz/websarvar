@@ -16,11 +16,11 @@ $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $first = filter_var($first, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     echo ( "$email is valid email");
- #   <break>
+    echo "<br>";
     echo ("First name = $first");
- #   <break>
+    echo "<br>";
     echo ("Last Namme = $last");
-
+    echo "<br>";
 ?>
 
 </body>
