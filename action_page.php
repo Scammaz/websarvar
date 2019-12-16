@@ -15,17 +15,18 @@ $last =($_GET['last']);
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $first = filter_var($first, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    echo ( "$email is valid email");
+   /* echo ( "$email is valid email");
     echo "<br>";
     echo ("First Name = $first");
     echo "<br>";
     echo ("Last Name = $last");
     echo "<br>";
+    */
     ?>  
     <div class="centerref">
         <?php
             // HERE IS THE INPUT AND SHOW SECTION OF THE SQL DATABASE
-
+     if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
         $servername = "localhost";
         $username = "php";
         $password = "password";
@@ -41,21 +42,24 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         if (mysqli_query($conn, $sql_insert)) {
             echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-        $result = mysqli_query($conn, $sql);
-        echo ("<br>");
-        if (mysqli_num_rows($result) > 0) {
+            } else {
+             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+            $result = mysqli_query($conn, $sql);
+            echo ("<br>");
+            if (mysqli_num_rows($result) > 0) {
             // output data of each row
-            while($row = mysqli_fetch_assoc($result)) {
+             while($row = mysqli_fetch_assoc($result)) {
                 echo "ID: " . $row["userid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " Email:" . $row["email"]. "<br>";
             }
-        } else {
-            echo "0 results";
+            } else {
+                echo "0 results";
         }
-
-        mysqli_close($conn);
+    mysqli_close($conn);
+    } else {
+        echo("$email is not a valid email address");
+        header('Location:index.php');
+        }
         ?>
     </div> 
 
