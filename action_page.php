@@ -25,13 +25,7 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     ?>  
     <div class="centerref">
         <?php
-        $x = 0;
-            while($x <= 5) {
-                sleep(1)
-               # `gpio blink 22`;
-                $x++;
-            }
-        
+
             // HERE IS THE INPUT AND SHOW SECTION OF THE SQL DATABASE
      if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
         $servername = "localhost";
