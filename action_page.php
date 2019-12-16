@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Yeet  </title>
+<title> Action  </title>
         <link rel="stylesheet" type="text/css" href="stylemaine.css"> <!--external css-->
 
 </head>
@@ -61,6 +61,10 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         header( "refresh:5;url=index.php" );
         }
         ?>
+        <?php   
+        $output=shell_exec('ls-lart');
+        echo"<div>$output</div>";
+        ?>  
     </div> 
 
 </body>
