@@ -58,7 +58,7 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     mysqli_close($conn);
     } else {
         echo("$email is not a valid email address");
-        header('Location:index.php');
+        header( "refresh:5;url=index.php" );
         }
         ?>
     </div> 
