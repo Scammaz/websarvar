@@ -50,7 +50,7 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             if (mysqli_num_rows($result) > 0) {
             // output data of each row
              while($row = mysqli_fetch_assoc($result)) {
-                echo "ID: " . $row["userid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " Email:" . $row["email"]. "<br>";
+                echo "ID: " . $row["userid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "        Email:" . $row["email"]. "<br>";
             }
             } else {
                 echo "0 results";
