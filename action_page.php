@@ -25,10 +25,10 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     ?>  
     <div class="centerref">
         <?php
-        $x = 0
+        $x = 0;
             while($x <= 5) {
                 sleep(1)
-                `gpio blink 22`;
+               # `gpio blink 22`;
                 $x++;
             }
         
@@ -68,10 +68,6 @@ $last = filter_var($last, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         header( "refresh:5;url=index.php" );
         }
         ?>
-        <?php   
-        $output=shell_exec('ls-lart');
-        echo"<div>$output</div>";
-        ?>  
     </div> 
 
 </body>
